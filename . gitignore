@@ -1,0 +1,14 @@
+# Node.js 의존성 관련 파일
+node_modules/
+database/
+
+# 환경 변수 파일 (예: .env)
+.env
+
+# IDE 또는 에디터 설정 파일
+.vscode/
+.idea/
+
+# 로그 및 임시 파일
+logs/
+temp/

@@ -5,10 +5,10 @@ const express = require('express');
 const router = express.Router();
 const { parseString } = require('xml2js');
 
-
+// 본회의 처리안건 Database insert Init 로직
 const initInsertAgenda = require('../database/logic/agenda-insert-init')
 
-const OPEN_API_KEY = 'c1742df8878448aabb0724fa1931a485'; // 국회 OPEN_API_KEY
+const OPEN_API_KEY = process.env.CON_OPEN_API_KEY;  // 국회 OPEN_API_KEY
 
 const maria = require('../database/connect/maria'); //maria.js 경로 입력
 const commonQuery = require('../database/query/common'); // 공통 쿼리 

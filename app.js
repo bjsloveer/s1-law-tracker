@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 var createError = require('http-errors');
 var express = require('express');
@@ -11,6 +12,8 @@ const expressLayouts = require('express-ejs-layouts');
 
 var indexRouter = require('./routes/index');
 
+// Admin Database Init
+var adminInitRouter = require('./routes/admin/init');
 
 // Member 메뉴
 var usersRouter = require('./routes/member/users');
@@ -45,7 +48,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/member/users', usersRouter);
 
-
+app.use('/admin/', adminInitRouter);
 
 
 // catch 404 and forward to error handler
